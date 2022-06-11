@@ -11,6 +11,7 @@ function maxSubArraySum(arr, num) {
   tempSum = maxSum;
 
   for (let i = num; i < arr.length; i++) {
+    // the idea is to remove the first element only from the sum and add the next one
     tempSum = tempSum - arr[i - num] + arr[i];
     maxSum = Math.max(maxSum, tempSum);
   }
